@@ -2,13 +2,21 @@
 
 > ## Before we begin 
 >
-> Make sure to have minikube, kubernetes and docker installed for any of the apps to run
-> Make sure you are in the minikube environment in your terminal. You can do so by typing the following :
->> (Ubuntu) : eval $(minikube -p minikube docker-env) | (Windows) minikube -p minikube docker-env | Invoke-Expression 
+> Make sure you have minikube, kubernetes and docker installed for any of the apps to run
+> Clone the repository
+> Every command given below are to be written directly from root directory 
 
-## How to launch the Nginx app
+## How to launch the Time app
 
-- Go to the stateless folder
+- kubectl apply -f .\Vlad\time-app\
+- minikube service -n default adminer frontend
 
 ## How to launch the Wordpress App
 
+- kubectl apply -k .\PA\stateful\
+- minikube service -n wp-app wordpress
+
+## How to launch the Nginx App
+
+- kubectl apply -f .\PA\stateless\
+- minikube service -n nginx --all

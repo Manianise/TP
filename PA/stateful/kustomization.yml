@@ -1,6 +1,7 @@
 
 secretGenerator:
 - name: mysql-pass
+  namespace : wp-app
   literals:
   - password=@dmin
 

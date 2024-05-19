@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spirits-deployment
+  name: dep
+  namespace: nginx
 spec:
   replicas: 2
   selector:
@@ -11,10 +12,10 @@ spec:
     metadata:
       labels:
         app: app
+
     spec:
       containers:
       - name: ctn
-        image: php-nginx 
-        imagePullPolicy: Never
+        image: mechameleon/nginx-short-app
         ports:
         - containerPort: 8080
