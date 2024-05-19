@@ -2,9 +2,9 @@
 
 > ## Before we begin 
 >
-> Make sure you have minikube, kubernetes and docker installed for any of the apps to run
-> Clone the repository
-> Every command given below are to be written directly from root directory 
+> - Make sure you have minikube, kubernetes and docker installed for any of the apps to run
+> - Clone the repository
+> - Every command given below are to be written directly from root directory 
 
 ## How to launch the Time app
 
