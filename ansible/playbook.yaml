@@ -1,0 +1,37 @@
+---
+- name: Install and configure Apache2 with Ansible Vault
+  hosts: servers
+  become: true
+  vars_files:
+    - secrets.yaml
+    - vars.yaml
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Create a simple HTML file
+      copy:
+        content: |
+          <html>
+          <body>
+          <h1>Apache is running!</h1>
+          <p>Admin user: {{ user }}</p>
+          <p> Admin password: {{ password }}
+          </body>
+          </html>
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+  handlers:
+  - name: Restart Apache2
+    service:
+      name: apache2
+      state: restarted
