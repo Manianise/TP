@@ -1,7 +1,11 @@
-# Welcome to this Readme template
+# Simple Terraform infrastructure using Docker provider
 
-> ## Before we begin 
+## Before we begin
 
-## How to
+This example will simply create 4 docker containers with 2 networks, one for every two. 
+The goal is to show that with just a few lines of code you can make two private networks that don't communicate with one another
 
-## How to
+> ### Here is the list of commands on how to init the project
+> - make sure terraform is installed in your environment
+> - terraform init
+> - terraform apply
