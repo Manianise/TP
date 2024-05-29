@@ -1,22 +1,7 @@
-# Welcome to this practical use of Kubernetes
+# Welcome to this Readme template
 
 > ## Before we begin 
->
-> - Make sure you have minikube, kubernetes and docker installed for any of the apps to run
-> - Clone the repository
-> - Every command given below are to be written directly from root directory 
 
-## How to run the Time app
+## How to
 
-- kubectl apply -f .\Vlad\time-app\
-- minikube service -n default adminer frontend
-
-## How to run the Wordpress App
-
-- kubectl apply -k .\PA\stateful\
-- minikube service -n wp-app wordpress
-
-## How to run the Nginx App
-
-- kubectl apply -f .\PA\stateless\
-- minikube service -n nginx --all
+## How to
