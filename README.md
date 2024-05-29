@@ -9,3 +9,5 @@ The goal is to show that with just a few lines of code you can make two private 
 > - make sure terraform is installed in your environment
 > - terraform init
 > - terraform apply
+
+## /!\ For some reason you sometimes need to terraform init twice in order for the project to work
