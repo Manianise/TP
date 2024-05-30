@@ -1,7 +1,7 @@
 # Quick Devops Tools installation using Terraform
 
 ![jenkins logo](https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg)
-![sonarqube logo](https://fr.wikipedia.org/wiki/Fichier:Sonarqube_logo.png#/media/Fichier:Sonarqube_logo.png)
+![sonarqube logo](https://www.svgrepo.com/show/354365/sonarqube.svg)
 
 ## Installation requirements :
 
@@ -24,4 +24,9 @@
 
 - Simply run a Terraform destroy command
 
-#### Enjoy !
+### Bare in mind !
+
+- In order to use Jenkjins to its full potential, you should create agents that are adapted to your needs (php CLI, node, composer...)
+- Master should never be used as agents for security purposes
+- Git projects must be linked with webhooks : [learn more about git webhooks](https://docs.github.com/en/webhooks/about-webhooks)
+- Sonarqube must be linked to your Jenkins pipelines in order to start testing : [Learn more about Sonarqube webhooks](https://docs.sonarsource.com/sonarqube/latest/project-administration/webhooks/)
