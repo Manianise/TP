@@ -7,10 +7,7 @@
     }
 </style>
 
-![Alt gear](./assets/svg/gear.svg)
-![Alt innerlight](./assets/svg/innerlight.svg)
-![Alt innercircle](./assets/svg/innercircle.svg)
-![Alt darkerlight](./assets/svg/darkerlight.svg)
+![Alt gear](./assets/svg/assets.svg)
 
 ## Installation requirements :
 
