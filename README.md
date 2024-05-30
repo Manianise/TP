@@ -26,7 +26,7 @@
 ### Bare in mind !
 
 - In order to use Jenkins to its full potential, you should create agents that are adapted to your needs (php CLI, node, composer...)
-- Master should never be used as agents for security purposes
+- Master should never be used as an agent for security purposes
 - Git projects must be linked with webhooks : [learn more about git webhooks](https://docs.github.com/en/webhooks/about-webhooks)
 - Sonarqube must be linked to your Jenkins pipelines in order to start testing : [Learn more about Sonarqube webhooks](https://docs.sonarsource.com/sonarqube/latest/project-administration/webhooks/)
 - default user/password is admin. You will be prompted to change them on install
