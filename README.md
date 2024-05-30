@@ -1,6 +1,6 @@
 # Quick Devops Tools installation using Terraform
 
-![Alt text](./assets/svg/assets.svg)
+![Alt text](./assets/svg/gear.svg)
 
 ## Installation requirements :
 
