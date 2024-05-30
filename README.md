@@ -1,11 +1,11 @@
 # Quick Devops Tools installation using Terraform
 
-<img src="./assets/svg/assets.svg" width="70" height="70"><img src="./assets/svg/jenkins.svg" width="70" height="70"><img src="./assets/svg/sonarqube-svgrepo-com.svg" width="100" height="70"><img src="./assets/svg/terralogo.svg" width="70" height="70">
+><img src="./assets/svg/assets.svg" width="70" height="70"><img src="./assets/svg/jenkins.svg" width="70" height="70"><img src="./assets/svg/sonarqube-svgrepo-com.svg" width="100" height="70"><img src="./assets/svg/terralogo.svg" width="70" height="70">
 
 ## Installation requirements :
 
-> - You need to have terraform installed. It can be found here : [Terraform install](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/install-cli)
-> - You need to have Docker Desktop or Docker Engine installed : [Docker install](https://docs.docker.com/engine/install/)
+- You need to have Terraform installed : [Terraform install](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/install-cli)
+- You need to have Docker Desktop or Docker Engine installed : [Docker install](https://docs.docker.com/engine/install/)
 
 ### This will automatically do the following :
 
