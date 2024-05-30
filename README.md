@@ -5,12 +5,12 @@
 ## Installation requirements :
 
 > - You need to have terraform installed. It can be found here : [Terraform install](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/install-cli)
-> - You need to have Docker Desktop or Docker Engine installed
+> - You need to have Docker Desktop or Docker Engine installed : [Docker install](https://docs.docker.com/engine/install/)
 
-### This will automatically install the following :
+### This will automatically do the following :
 
 - Quick installation of Jenkins
-- Quick installation of Sonarqube
+- Quick installation of Sonarqube with postgres database (/!\ credentials unsafe, change them here : [creds](./modules/variables.tf))
 
 ### Run the following commands to initialize :
 
