@@ -1,6 +1,6 @@
 # Quick Devops Tools installation using Terraform
 
-<img src="./assets/svg/assets.svg" width="150" height="150"><img src="./assets/svg/jenkins.svg" width="150" height="150"><img src="./assets/svg/sonarqube-svgrepo-com.svg" width="250" height="150"><img src="./assets/svg/terraform-svgrepo-com.svg" width="150" height="150">
+<img src="./assets/svg/assets.svg" width="150" height="150"><img src="./assets/svg/jenkins.svg" width="150" height="150"><img src="./assets/svg/sonarqube-svgrepo-com.svg" width="250" height="150"><img src="./assets/svg/terralogo.svg" width="150" height="150">
 
 ## Installation requirements :
 
