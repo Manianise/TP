@@ -1,5 +1,12 @@
 # Quick Devops Tools installation using Terraform
 
+<style>
+
+    * {
+        background:white;
+    }
+</style>
+
 ![Alt gear](./assets/svg/gear.svg)
 ![Alt innerlight](./assets/svg/innerlight.svg)
 ![Alt innercircle](./assets/svg/innercircle.svg)
