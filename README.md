@@ -1,6 +1,6 @@
 # Quick Devops Tools installation using Terraform
 
-<img src="./assets/svg/assets.svg" width="250" height="250">
+<img src="./assets/svg/assets.svg" width="250" height="250"> Powered by esprit-prof
 
 ## Installation requirements :
 
