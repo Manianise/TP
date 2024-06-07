@@ -1,5 +1,5 @@
 module "vars" {
   source = "./modules"
-  
+
 }
 

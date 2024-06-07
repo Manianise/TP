@@ -23,10 +23,18 @@
 
 - Simply run a Terraform destroy command
 
+### Initiating Jenkins agent
+
+- To create an agent, follow the steps written here [jenkins inbound agent](https://hub.docker.com/r/jenkins/inbound-agent) then run :
+> docker run --init --network=dev-tools-network --name=node_agent mechameleon/node_agent:0.0.2 -url http://devops-pipeline:8080 -workDir=/home/jenkins/agent -secret <your_secret> -name node_agent
+> /!\ : don't forget to replace <your_secret> by the secret provided by jenkins node manager interface !
+
+
+### Setting up a Pipeline 
+### Setting up Sonarqube
 ### Bare in mind !
 
-- In order to use Jenkins to its full potential, you should create agents that are adapted to your needs (php CLI, node, composer...)
-- Master should never be used as an agent for security purposes
+- Master should never be used as an agent for security purposes. Change settings in "system administration > number of executors" to 0
 - Git projects must be linked with webhooks : [learn more about git webhooks](https://docs.github.com/en/webhooks/about-webhooks)
 - Sonarqube must be linked to your Jenkins pipelines in order to start testing : [Learn more about Sonarqube webhooks](https://docs.sonarsource.com/sonarqube/latest/project-administration/webhooks/)
 - default user/password is admin. You will be prompted to change them on install

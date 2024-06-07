@@ -39,3 +39,14 @@ variable "postgres_version" {
   default     = "latest"
 }
 
+variable "jenkins_version" {
+  description = "Jenkins version"
+  type = string
+  default = "lts-jdk17"
+}
+
+variable "nameservers" {
+  description = "default dns for containers"
+  type = list(string)
+  default = ["8.8.8.8", "8.8.4.4"]
+}
