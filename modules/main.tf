@@ -6,7 +6,7 @@ resource "docker_image" "jenkins" {
 
 # App needs an agent to run
 resource "docker_image" "j-agent" {
-  name = "mechameleon/node_agent:0.0.2"
+  name = "mechameleon/node_agent:0.0.3"
 }
 
 # Get sonarqube image
