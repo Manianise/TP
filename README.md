@@ -34,7 +34,8 @@ http://172.216.0.5:9000
 ### Initiating Jenkins agent
 
 - To create an agent go to Manage jenkins > Node :
-![screen-1](./assets/img/screen-4.png)
+
+<img src="./assets/img/screen-4.png" alt="screen1" width="700px" />
 
 - Then create a new node :
 
