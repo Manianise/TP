@@ -39,11 +39,11 @@ http://172.216.0.5:9000
 
 - Then create a new node :
 
-![screen-2](./assets/img/screen-1.png)
+<img src="./assets/img/screen-1.png" alt="screen2" width="700px" />
 
 - Save the node, then head to your newly created agent and get the secret :
 
-![screen-3](./assets/img/screen-3.png)
+<img src="./assets/img/screen-3.png" alt="screen3" width="700px" />
 
 #### Run the following command
 
@@ -56,15 +56,15 @@ http://172.216.0.5:9000
 
 - Create a docker hub personal access token [link to your settings](https://hub.docker.com/settings/general)
 
-![screen-4](./assets/img/access_token_docker.jpg)
+<img src="./assets/img/access_token_docker.jpg" alt="screen4" width="700px" />
 
 - Make sure you copy somewhere (you won't see it anymore afterwards)
 
-![screen-4](./assets/img/access_token_docker_2.jpg)
+<img src="./assets/img/access_token_docker_2.jpg" alt="screen5" width="700px" />
 
 - Create a credential for your docker hub pat by going to Manage Jenkins > Credentials > New credential
 
-![screen-4](./assets/img/creds_jenkins.png)
+<img src="./assets/img/creds_jenkins.png" alt="screen6" width="700px" />
 
 - In the pipeline script, simply copy paste the content of the jenkinsfile [here](https://github.com/Manianise/spiritsPresentation)
 
@@ -72,15 +72,15 @@ http://172.216.0.5:9000
 
 - Create a SonarQube webhook by going in Administration > Webhooks > Create
 
-![screen-4](./assets/img/sonar-wh.png)
+<img src="./assets/img/sonar-wh.png" alt="screen7" width="700px" />
 
 - Setup a SonarQube project (default creds are admin/admin)
 
-![screen-4](./assets/img/sonar-screen1.png)
+<img src="./assets/img/sonar-screen1.png" alt="screen8" width="700px" />
 
 - Copy/paste your id in the corresponding step in the Jenkins pipeline
 
-![screen-4](./assets/img/sonar-s2.jpg)
+<img src="./assets/img/sonar-s2.jpg" alt="screen9" width="700px" />
 
 ### Easy to delete instance
 
