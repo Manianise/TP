@@ -28,7 +28,6 @@ Terraform apply
 
 ```
 http://172.216.0.5:9000
-
 ```
 
 ### Initiating Jenkins agent
@@ -48,7 +47,7 @@ http://172.216.0.5:9000
 #### Run the following command
 
 ```
- docker run --init --network=dev-tools-network --name=node_agent mechameleon/node_agent:0.0.3 -url http://devops-pipeline:8080 -workDir=/home/jenkins/agent -secret <your_secret> -name node_agent
+ docker run --init --network=dev-tools-network --name=node_agent mechameleon/node_agent:0.0.4 -url http://devops-pipeline:8080 -workDir=/home/jenkins/agent -secret <your_secret> -name node_agent
 ```
 > /!\ : don't forget to replace <your_secret> by the secret provided by jenkins (i.e image above) !
 
