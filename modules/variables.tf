@@ -1,3 +1,5 @@
+# Related to docker
+
 variable "docker_ports" {
   type = object({
     int = number
@@ -50,3 +52,18 @@ variable "nameservers" {
   type = list(string)
   default = ["8.8.8.8", "8.8.4.4"]
 }
+
+# Related to AWS
+
+variable "private_ips" {
+  description = "List of private IPs for the instances"
+  type        = list(string)
+  default     = ["10.0.1.10", "10.0.1.11"]
+}
+
+variable "cluster_name" {
+  description = "EKS Cluster Name"
+  type        = string
+  default     = "my-eks-cluster"
+}
+

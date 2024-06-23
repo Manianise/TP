@@ -1,0 +1,1 @@
+### All K8s files are deployed using ansbible [here](../ansible/templates/)

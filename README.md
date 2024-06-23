@@ -47,7 +47,7 @@ http://172.216.0.5:9000
 #### Run the following command
 
 ```
- docker run --init --network=dev-tools-network --name=node_agent mechameleon/node_agent:0.0.4 -url http://devops-pipeline:8080 -workDir=/home/jenkins/agent -secret <your_secret> -name node_agent
+ docker run --init --network=dev-tools-network --name=node_agent mechameleon/node_agent:0.0.5 -url http://devops-pipeline:8080 -workDir=/home/jenkins/agent -secret <your_secret> -name node_agent
 ```
 > /!\ : don't forget to replace <your_secret> by the secret provided by jenkins (i.e image above) !
 
@@ -65,7 +65,9 @@ http://172.216.0.5:9000
 
 <img src="./assets/img/creds_jenkins.png" alt="screen6" width="700px" />
 
-- In the pipeline script, simply copy paste the content of the jenkinsfile [here](https://github.com/Manianise/spiritsPresentation)
+- In the pipeline script, simply chose SCM, Git (no credentials needed)
+
+<img src="./assets/img/pipeline-git.jpg" alt="screen6" width="700px" />
 
 ### Setting up Sonarqube
 
@@ -81,6 +83,13 @@ http://172.216.0.5:9000
 
 <img src="./assets/img/sonar-s2.jpg" alt="screen9" width="700px" />
 
+### Launching Kubernetes cluster
+
+- With Ansible installed, simply run the playbook :
+```
+ansible-playbook playbook.yml
+```
+
 ### Easy to delete instance
 
 - Simply run a Terraform destroy command
@@ -90,3 +99,4 @@ http://172.216.0.5:9000
 - Master should never be used as an agent for security purposes. Change settings in "system administration > number of executors" to 0
 - Git projects must be linked with webhooks : [learn more about git webhooks](https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks)
 - Sonarqube must be linked to your Jenkins pipelines in order to start testing : [Learn more about Sonarqube webhooks](https://docs.sonarsource.com/sonarqube/latest/project-administration/webhooks/)
+- You will need an aws cluster installed as well as your credentials and personnal acces token.

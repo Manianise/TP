@@ -1,0 +1,6 @@
+---
+cluster_name: my-eks-cluster
+region: us-west-2
+nodegroup_name: my-node-group
+k8s_namespace: default
+docker_image: my-docker-image:latest
