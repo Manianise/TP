@@ -89,6 +89,7 @@ http://172.216.0.5:9000
 ```
 ansible-playbook playbook.yml
 ```
+- (Optionnal) you can create a new Jenkins pipeline to automate Ansible playbook.
 
 ### Easy to delete instance
 
