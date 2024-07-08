@@ -1,1 +1,1 @@
-### All K8s files are deployed using ansbible [here](../ansible/templates/)
+### All K8s files are deployed using ansible [here](../ansible/)

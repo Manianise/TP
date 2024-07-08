@@ -104,90 +104,90 @@ resource "docker_container" "sonarqube" {
 
 # Instanciating remote VM creation with fixed Ips
 
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+# resource "aws_vpc" "main" {
+#   cidr_block = "10.0.0.0/16"
 
-  tags = {
-    Name = "main-vpc"
-  }
-}
+#   tags = {
+#     Name = "main-vpc"
+#   }
+# }
 
-resource "aws_subnet" "main" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"
+# resource "aws_subnet" "main" {
+#   vpc_id     = aws_vpc.main.id
+#   cidr_block = "10.0.1.0/24"
 
-  tags = {
-    Name = "main-subnet"
-  }
-}
+#   tags = {
+#     Name = "main-subnet"
+#   }
+# }
 
-resource "aws_security_group" "main" {
-  vpc_id = aws_vpc.main.id
+# resource "aws_security_group" "main" {
+#   vpc_id = aws_vpc.main.id
 
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+#   ingress {
+#     from_port   = 22
+#     to_port     = 22
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
 
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+#   ingress {
+#     from_port   = 80
+#     to_port     = 80
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+#   egress {
+#     from_port   = 0
+#     to_port     = 0
+#     protocol    = "-1"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
 
-  tags = {
-    Name = "main-sg"
-  }
-}
+#   tags = {
+#     Name = "main-sg"
+#   }
+# }
 
-resource "aws_instance" "worker" {
-  count         = 2
-  ami           = "Your AMI ID"  
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.main.id
-  security_groups = [aws_security_group.main.name]
+# resource "aws_instance" "worker" {
+#   count         = 2
+#   ami           = "Your AMI ID"  
+#   instance_type = "t2.micro"
+#   subnet_id     = aws_subnet.main.id
+#   security_groups = [aws_security_group.main.name]
 
-  tags = {
-    Name = "worker-instance-${count.index}"
-  }
+#   tags = {
+#     Name = "worker-instance-${count.index}"
+#   }
 
-  user_data = <<-EOF
-              #!/bin/bash
-              echo "Joining EKS cluster"
-              # Install AWS CLI
-              sudo apt-get update
-              sudo apt-get install -y awscli
+#   user_data = <<-EOF
+#               #!/bin/bash
+#               echo "Joining EKS cluster"
+#               # Install AWS CLI
+#               sudo apt-get update
+#               sudo apt-get install -y awscli
 
-              # Install kubectl
-              curl -o kubectl https://amazon-eks.s3.us-east-1.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
-              chmod +x ./kubectl
-              sudo mv ./kubectl /usr/local/bin
+#               # Install kubectl
+#               curl -o kubectl https://amazon-eks.s3.us-east-1.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl
+#               chmod +x ./kubectl
+#               sudo mv ./kubectl /usr/local/bin
 
-              # Get cluster join command
-              aws eks update-kubeconfig --name ${var.cluster_name}
+#               # Get cluster join command
+#               aws eks update-kubeconfig --name ${var.cluster_name}
 
-              # Your commands to join the cluster here
-              EOF
+#               # Your commands to join the cluster here
+#               EOF
 
-  private_ip = var.private_ips[count.index]
-}
+#   private_ip = var.private_ips[count.index]
+# }
 
-# attribute static IPs
+# # attribute static IPs
 
-resource "aws_eip" "worker_eip" {
-  count      = 2
-  instance   = element(aws_instance.worker.*.id, count.index)
-  depends_on = [aws_instance.worker]
-  vpc = true
-}
+# resource "aws_eip" "worker_eip" {
+#   count      = 2
+#   instance   = element(aws_instance.worker.*.id, count.index)
+#   depends_on = [aws_instance.worker]
+#   vpc = true
+# }
 
