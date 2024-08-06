@@ -100,4 +100,4 @@ ansible-playbook playbook.yml
 - Master should never be used as an agent for security purposes. Change settings in "system administration > number of executors" to 0
 - Git projects must be linked with webhooks : [learn more about git webhooks](https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks)
 - Sonarqube must be linked to your Jenkins pipelines in order to start testing : [Learn more about Sonarqube webhooks](https://docs.sonarsource.com/sonarqube/latest/project-administration/webhooks/)
-- You will need an aws cluster installed as well as your credentials and personnal acces token.
+- You will need an aws cluster installed as well as your credentials and personnal access token.
