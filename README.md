@@ -2,4 +2,4 @@
 
 #### Chose a branch and clone the corresponding project.
 
-- If don't want to look into different projects but see one using most technologies, just click on the "CI-CD" branch. Enjoy !
+- If you don't want to bother looking into different projects but see one whose using most technologies, just click on the "CI-CD" branch. Enjoy !
