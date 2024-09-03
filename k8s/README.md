@@ -1,1 +1,0 @@
-### All K8s files are deployed using ansible [here](../ansible/)

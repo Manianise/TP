@@ -1,6 +1,12 @@
 # Quick Devops Tools installation using Terraform
 
-><img src="./assets/svg/assets.svg" width="70" height="70"><img src="./assets/svg/jenkins.svg" width="70" height="70"><img src="./assets/svg/sonarqube-svgrepo-com.svg" width="100" height="70"><img src="./assets/svg/terralogo.svg" width="70" height="70">
+![jenkins](https://img.shields.io/badge/Jenkins-20%25-D24939?logo=jenkins)
+![sonarqube](https://img.shields.io/badge/Sonarqube-10%25-4E9BCD?logo=sonarqube)
+![terraform](https://img.shields.io/badge/Terraform-30%25-844FBA?logo=terraform)
+![docker](https://img.shields.io/badge/Docker-30%25-2496ED?logo=docker)
+![ansible](https://img.shields.io/badge/Ansible-10%25-EE0000?logo=ansible)
+
+Quick Test environment for using Jenkins pipeline and installing with Terraform
 
 ## Installation requirements :
 
@@ -22,6 +28,8 @@ Terraform apply
 
 > Containers will listen on port 8080 and 9000 for both Jenkins and Sonarqube on your local machine
 
+***
+
 ### Jenkins configuration
 
 - You will need to install the SonarQube Scanner plugin. Go to Manage Jenkins > System and set SonarQube URL :
@@ -29,6 +37,14 @@ Terraform apply
 ```
 http://172.216.0.5:9000
 ```
+
+>   Installing SSH on Jenkins
+>   
+>   If you want to map your ssh folder to jenkins, just run the following command :
+>   
+>   ```
+>   docker run -d --restart on-failure -u jenkins:jenkins --network dev-tools-network -v <path_to_ssh>:/var/.ssh -p > 8080:8080 -p 50000:50000 --name devops-pipeline jenkins/jenkins:lts
+>   ```
 
 ### Initiating Jenkins agent
 
@@ -83,13 +99,9 @@ http://172.216.0.5:9000
 
 <img src="./assets/img/sonar-s2.jpg" alt="screen9" width="700px" />
 
-### Launching Kubernetes cluster
+### Installing Grafana, the monitoring tool !
 
-- With Ansible installed, simply run the playbook :
-```
-ansible-playbook playbook.yml
-```
-- (Optionnal) you can create a new Jenkins pipeline to automate Ansible playbook.
+
 
 ### Easy to delete instance
 
