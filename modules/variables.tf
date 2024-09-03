@@ -5,11 +5,11 @@ variable "docker_ports" {
   })
   default = {
       int = 22
-      ext = 2000
+      ext = 2222
     }
 }
 
-variable "nbr" {
-  type = number
-  default = 2  
+variable "networks" {
+  type = list(string)
+  default = ["network1", "network2"]
 }
