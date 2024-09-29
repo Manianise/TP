@@ -1,4 +1,0 @@
----
-- name: Configure kubectl for EKS cluster
-  command: >
-    aws eks --region {{ region }} update-kubeconfig --name {{ cluster_name }}

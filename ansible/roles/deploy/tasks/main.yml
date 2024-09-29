@@ -1,8 +1,0 @@
----
-- name: Deploy application to Kubernetes
-  template:
-    src: spirits/deployment.yaml
-    dest: /tmp/deployment.yml
-
-- name: Apply Kubernetes deployment
-  command: kubectl apply -f /tmp/deployment.yml
